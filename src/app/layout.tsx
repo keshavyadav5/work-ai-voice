@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Voice Agent — Brutalist AI Voice Interface",
+  title: "Voice Agent",
   description: "Real-time, context-driven voice agent. Select a scenario and have a natural two-way voice conversation with AI.",
   keywords: ["voice agent", "AI", "speech-to-text", "text-to-speech", "conversational AI"],
 };
