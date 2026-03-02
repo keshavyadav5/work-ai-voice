@@ -97,95 +97,14 @@ export default function ScenarioDetailPage() {
                         <span className="text-sm font-black tracking-widest uppercase">Scenarios</span>
                     </Link>
                     <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black shadow-glow-green">
-                            <span className="material-symbols-outlined text-xl">graphic_eq</span>
-                        </div>
                         <h1 className="text-xl font-black tracking-tight uppercase text-white">Voice Agent</h1>
                     </div>
-                    <button className="w-10 h-10 rounded-full bg-surface-dark/50 hover:bg-surface-dark flex items-center justify-center text-white transition-colors backdrop-blur-sm border border-white/5">
-                        <span className="material-symbols-outlined">settings</span>
-                    </button>
                 </header>
 
                 {/* Bento Grid layout */}
-                <main className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)] flex-grow">
-                    {/* Hero Block (Spans 2 cols, 2 rows) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className={`bento-card col-span-1 md:col-span-2 lg:col-span-2 row-span-2 bg-gradient-to-br ${data.gradient} rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden group shadow-brutal-white`}
-                    >
-                        <div className="absolute top-0 right-0 p-32 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-                        <div className="relative z-10 flex justify-between items-start">
-                            <div className="bg-white/20 backdrop-blur-md p-4 rounded-2xl inline-flex">
-                                <span className="material-symbols-outlined text-5xl text-white">{data.icon}</span>
-                            </div>
-                            <div className="flex gap-1 items-end h-8">
-                                <div className="w-1.5 h-3 bg-white/40 rounded-full animate-pulse"></div>
-                                <div className="w-1.5 h-6 bg-white/60 rounded-full animate-pulse delay-75"></div>
-                                <div className="w-1.5 h-4 bg-white/40 rounded-full animate-pulse delay-150"></div>
-                                <div className="w-1.5 h-8 bg-white rounded-full animate-pulse delay-100"></div>
-                                <div className="w-1.5 h-5 bg-white/60 rounded-full animate-pulse delay-200"></div>
-                                <div className="w-1.5 h-3 bg-white/40 rounded-full animate-pulse delay-300"></div>
-                            </div>
-                        </div>
-                        <div className="relative z-10 mt-auto">
-                            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none mb-4 uppercase">{data.name.split(' ').join('\n')}</h2>
-                            <p className="text-blue-100 text-lg font-medium max-w-md leading-relaxed opacity-90">
-                                {data.description}
-                            </p>
-                        </div>
-                    </motion.div>
+                <main className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)] grow">
+                    
 
-                    {/* Stats Block: Response Time */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="bento-card bg-primary rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden shadow-brutal"
-                    >
-                        <div className="absolute -right-4 -top-4 text-black/10">
-                            <span className="material-symbols-outlined text-9xl">speed</span>
-                        </div>
-                        <h3 className="text-black font-black text-sm tracking-widest uppercase relative z-10">Avg Response</h3>
-                        <div className="mt-auto relative z-10">
-                            <p className="text-5xl font-black text-black tracking-tighter">
-                                {data.responseTime.replace('~', '')}<span className="text-2xl align-top">ms</span>
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* Stats Block: Context */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="bento-card bg-accent-violet rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden shadow-brutal-violet"
-                    >
-                        <div className="absolute -right-4 -top-4 text-white/10">
-                            <span className="material-symbols-outlined text-9xl">history</span>
-                        </div>
-                        <h3 className="text-white font-black text-sm tracking-widest uppercase relative z-10">Context</h3>
-                        <div className="mt-auto relative z-10">
-                            <p className="text-5xl font-black text-white tracking-tighter">
-                                {data.contextSize.replace('msgs', '')}<span className="text-2xl align-top">msgs</span>
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* Engine Block */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        className="bento-card bg-surface-dark border border-white/10 rounded-2xl p-6 flex flex-col justify-center items-start lg:col-span-1 shadow-brutal-white"
-                    >
-                        <h3 className="text-slate-400 font-black text-xs tracking-widest uppercase mb-2">Engine Model</h3>
-                        <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-glow-green"></div>
-                            <p className="text-2xl font-bold text-white tracking-tight leading-none">{data.model}</p>
-                        </div>
-                    </motion.div>
 
                     {/* Capabilities Block */}
                     <motion.div
